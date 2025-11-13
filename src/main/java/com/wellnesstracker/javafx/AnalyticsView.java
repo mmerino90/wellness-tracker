@@ -1,4 +1,4 @@
-package javafx;
+package com.wellnesstracker.javafx;
 
 import javafx.fxml.FXML;
 import javafx.scene.chart.*;
@@ -6,11 +6,11 @@ import javafx.scene.control.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.stage.Stage;
-import model.User;
-import model.MoodEntry;
-import model.Habit;
-import controller.MoodController;
-import controller.HabitController;
+import com.wellnesstracker.model.User;
+import com.wellnesstracker.model.MoodEntry;
+import com.wellnesstracker.model.Habit;
+import com.wellnesstracker.controller.MoodController;
+import com.wellnesstracker.controller.HabitController;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.*;

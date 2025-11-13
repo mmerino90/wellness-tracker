@@ -7,7 +7,7 @@
 <!-- Main dashboard layout -->
 <BorderPane xmlns="http://javafx.com/javafx" 
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="javafx.DashboardView">
+            fx:controller="com.wellnesstracker.javafx.DashboardView">
     
     <!-- Top menu bar -->
     <top>
@@ -16,20 +16,20 @@
             <Separator orientation="VERTICAL"/>
             <Label fx:id="welcomeLabel" text="Welcome"/>
             <Region HBox.hgrow="ALWAYS"/>
-            <Button fx:id="logoutButton" text="Logout"/>
+            <Button fx:id="logoutButton" text="Logout" onAction="#handleLogout"/>
         </HBox>
     </top>
     
     <!-- Left sidebar navigation -->
     <left>
         <VBox spacing="10" style="-fx-padding: 15; -fx-background-color: #e8e8e8; -fx-min-width: 150;">
-            <Button fx:id="habitsButton" text="Habits" prefWidth="130"/>
-            <Button fx:id="moodButton" text="Mood Tracking" prefWidth="130"/>
+            <Button fx:id="habitsButton" text="Habits" prefWidth="130" onAction="#handleHabitsNavigation"/>
+            <Button fx:id="moodButton" text="Mood Tracking" prefWidth="130" onAction="#handleMoodNavigation"/>
             <Button fx:id="analyticsButton" text="Analytics" prefWidth="130" onAction="#handleAnalyticsNavigation"/>
-            <Button fx:id="challengesButton" text="Challenges" prefWidth="130"/>
+            <Button fx:id="challengesButton" text="Challenges" prefWidth="130" onAction="#handleChallengesNavigation"/>
             <Separator/>
-            <Button text="Profile" prefWidth="130"/>
-            <Button text="Settings" prefWidth="130"/>
+            <Button text="Profile" prefWidth="130" onAction="#handleProfileNavigation"/>
+            <Button text="Settings" prefWidth="130" onAction="#handleSettingsNavigation"/>
         </VBox>
     </left>
     

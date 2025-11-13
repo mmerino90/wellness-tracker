@@ -4,19 +4,20 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.chart.*?>
 <?import javafx.geometry.Insets?>
+<?import javafx.collections.FXCollections?>
 
 <!-- Analytics & Visualization View -->
 <BorderPane xmlns="http://javafx.com/javafx" 
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="javafx.AnalyticsView"
+            fx:controller="com.wellnesstracker.javafx.AnalyticsView"
             style="-fx-background-color: #f5f5f5;">
     
     <!-- Top navigation bar -->
     <top>
         <HBox spacing="10" style="-fx-padding: 15; -fx-background-color: #fff; -fx-border-color: #ddd; -fx-border-width: 0 0 1 0;">
-            <Button text="← Back" onAction="#handleBack" 
+            <Button text="&lt; Back" onAction="#handleBack" 
                     style="-fx-font-size: 12; -fx-padding: 8 15;"/>
-            <Label text="Analytics & Insights" style="-fx-font-size: 18; -fx-font-weight: bold;"/>
+            <Label text="Analytics &amp; Insights" style="-fx-font-size: 18; -fx-font-weight: bold;"/>
             <Region HBox.hgrow="ALWAYS"/>
             <ComboBox fx:id="timeRangeCombo" prefWidth="150" 
                       style="-fx-font-size: 12;">
@@ -26,8 +27,8 @@
                         <String fx:value="Last 30 days"/>
                         <String fx:value="Last 90 days"/>
                         <String fx:value="All time"/>
-                    </items>
-                </FXCollections>
+                    </FXCollections>
+                </items>
             </ComboBox>
             <Button text="Refresh" onAction="#handleRefresh" 
                     style="-fx-font-size: 12; -fx-padding: 8 15;"/>
