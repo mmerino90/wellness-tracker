@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<!-- Main dashboard layout -->
+<BorderPane xmlns="http://javafx.com/javafx" 
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="javafx.DashboardView">
+    
+    <!-- Top menu bar -->
+    <top>
+        <HBox spacing="10" style="-fx-padding: 10; -fx-background-color: #f0f0f0;">
+            <Label text="Wellness Tracker" style="-fx-font-size: 18; -fx-font-weight: bold;"/>
+            <Separator orientation="VERTICAL"/>
+            <Label fx:id="welcomeLabel" text="Welcome"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button fx:id="logoutButton" text="Logout"/>
+        </HBox>
+    </top>
+    
+    <!-- Left sidebar navigation -->
+    <left>
+        <VBox spacing="10" style="-fx-padding: 15; -fx-background-color: #e8e8e8; -fx-min-width: 150;">
+            <Button fx:id="habitsButton" text="Habits" prefWidth="130"/>
+            <Button fx:id="moodButton" text="Mood Tracking" prefWidth="130"/>
+            <Button fx:id="analyticsButton" text="Analytics" prefWidth="130" onAction="#handleAnalyticsNavigation"/>
+            <Button fx:id="challengesButton" text="Challenges" prefWidth="130"/>
+            <Separator/>
+            <Button text="Profile" prefWidth="130"/>
+            <Button text="Settings" prefWidth="130"/>
+        </VBox>
+    </left>
+    
+    <!-- Center content area -->
+    <center>
+        <AnchorPane fx:id="mainContainer" style="-fx-padding: 20;">
+            <Label text="Welcome to Wellness Tracker" 
+                   style="-fx-font-size: 24; -fx-font-weight: bold;"
+                   AnchorPane.topAnchor="20" 
+                   AnchorPane.leftAnchor="20"/>
+        </AnchorPane>
+    </center>
+    
+</BorderPane>
